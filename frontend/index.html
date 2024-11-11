@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonerLedger</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">DonerLedger</h1>
+
+        <!-- Create Campaign Form -->
+        <div class="card my-4">
+            <div class="card-body">
+                <h4>Create a New Campaign</h4>
+                <form id="createCampaignForm">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description" placeholder="Campaign description">
+                    </div>
+                    <div class="form-group">
+                        <label for="goal">Goal (ETH)</label>
+                        <input type="number" class="form-control" id="goal" placeholder="Campaign goal">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Campaign</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Donate Form -->
+        <div class="card my-4">
+            <div class="card-body">
+                <h4>Donate to a Campaign</h4>
+                <form id="donateForm">
+                    <div class="form-group">
+                        <label for="campaignId">Campaign ID</label>
+                        <input type="number" class="form-control" id="campaignId" placeholder="Campaign ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="donationAmount">Donation Amount (ETH)</label>
+                        <input type="number" class="form-control" id="donationAmount" placeholder="Amount in ETH">
+                    </div>
+                    <button type="submit" class="btn btn-success">Donate</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Campaign Info -->
+        <div class="card my-4">
+            <div class="card-body">
+                <h4>Campaign Details</h4>
+                <ul id="campaignList" class="list-group">
+                    <!-- Campaigns will appear here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
